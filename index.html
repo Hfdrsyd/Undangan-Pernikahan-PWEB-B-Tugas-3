@@ -19,9 +19,10 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <audio autoplay>
-      <source src="images/musik.mp3" type="audio/mp3" />
+    <audio id="song">
+      <source src="musik.mp3" />
     </audio>
+
     <header>
       <h2><a class="logo" href="#">Wedding</a></h2>
       <nav>
@@ -94,14 +95,19 @@
       </ul>
     </section>
     <section class="rsvp-area" id="rsvp">
-      <h3 class="section-title">Are Your Attending?</h3>
+      <h3 class="section-title">Are You Attending?</h3>
       <ul class="rsvp-content">
         <li>
-          <i class="fa fa-gift"></i>
-          <p>Kehadiran kalian sangat kami tunggu tunggu.</p>
+          <i class="fa fa-heart-o"></i>
+          <p>We look forward to your presence with great anticipation.</p>
           <a href="#">RSVP</a>
         </li>
       </ul>
     </section>
+    <script>
+      window.addEventListener("click", () => {
+        document.getElementById("song").play();
+      });
+    </script>
   </body>
 </html>
